@@ -1,0 +1,35 @@
+<MyGridLayout>
+
+    name:name
+    iceCream:iceCream
+    color:color
+
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+
+        GridLayout:
+            cols:2
+            Label:
+                text: "Name"
+
+            TextInput:
+                id: name
+                multiline:False
+
+            Label:
+                text: "Favourite IceCream"
+            TextInput:
+                id:iceCream
+                multiline:False
+
+            Label:
+                text: "Favourite Color"
+            TextInput:
+                id:color
+                multiline:False
+
+        Button:
+            text:"Submit"
+            font_size:33
+            on_press: root.press()
