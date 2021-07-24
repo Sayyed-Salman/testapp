@@ -1,10 +1,10 @@
 from kivy.app import App
-from kivy.uix.label import Label
-from kivy.uix.gridlayout import GridLayout
-from kivy.uix.textinput import TextInput
-from kivy.uix.button import Button
 from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
+from kivy.lang import Builder
+
+# Working with load file with Builder Module
+Builder.load_file('new.kv')
 
 
 class MyGridLayout(Widget):
@@ -27,10 +27,10 @@ class MyGridLayout(Widget):
         self.color.text = ""
 
 
-class Myapp(App):
+class This_app(App):
     def build(self):
         return MyGridLayout()
 
 
 if __name__ == '__main__':
-    Myapp().run()
+    This_app().run()
